@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>类似图片大小的缩放</title>
+    <style type="text/css">
+    body {
+        padding: 0px;
+        margin: 0px;
+        /*background: url('img/bg.jpg');*/
+    }
+    #container {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    ul {
+        margin-top: 0px;
+        position: absolute;
+        top: 0px;
+    }
+    ul li {
+        list-style: none;
+        width: 150px;
+        height: 80px;
+        background: #000;
+        opacity: 0.3;
+        filter: alpha(opacity: 30);
+        float: left;
+        margin: 1px;
+        font-size: 30px;
+        font-family: microsoft yahei;
+        color: #FFF;
+        border-bottom: 10px #0f0 solid;
+    }
+    </style>
+    <script type="text/javascript">
+    window.onload = function() {
+        var parentNode = document.getElementById("container");
+        var ali = parentNode.getElementsByTagName("li");
+        for (var i = 0; i < ali.length; i++) {
+            ali[i].onmouseover = function() {
+                animation(this, 160);
+            }
+            ali[i].onmouseout = function() {
+                animation(this, 80);
+            }
+        };
+    }
+
+    // 执行动画的方法
+    function animation(obj, target) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function() {
+            var speed = (target - obj.offsetHeight) / 20;
+            speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+            if (parseInt(getStyle(obj,'height')) == target) {
+                clearInterval(obj.timer);
+            } else {
+                obj.style.height = parseInt(getStyle(obj,'height')) + speed + "px";
+            }
+        }, 10);
+    }
+
+    /*用于获取元素样式，排除边框和边距的干扰*/
+    function getStyle(obj, attr) {
+        if (obj.currentStyle) {
+        	return obj.currentStyle[attr];
+        } else {
+        	return getComputedStyle(obj,false)[attr];
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <ul>
+            <li>导航-1</li>
+            <li>导航-2</li>
+            <li>导航-3</li>
+            <li>导航-4</li>
+            <li>导航-5</li>
+            <li>导航-6</li>
+            <li>导航-7</li>
+        </ul>
+    </div>
+</body>
+
+</html>

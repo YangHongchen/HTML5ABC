@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>001 javascript 概览</title>
+	<style>
+		body{
+			line-height: 23px;
+		}
+	</style>
+</head>
+<body>
+	
+	javaScript 是面向Web的编程语言<br/>
+	<h3>前端工程师必须掌握的3大技能:</h3>
+	01.描述网页内容的HTML <br>
+	02.描述网页央视的CSS <br>
+	03.描述网页行为的Javascript <br>
+
+	<hr>
+	Javascript 是一门高端的，动态的，弱类型的编程语言。非常适合面向对象和函数式的编程风格。<br>
+	JavaScript的语法来自Java，他的一等函数来自Scheme，他的基本原型（prototype-baseed)继承来自于Self。
+	<br>
+	<br>
+	<br>
+
+	<h2>第一章 JavaScript语言核心</h2>
+	JavaScript支持的数据类型：int,string,char,boolean,null
+	<br>当然还有两种非常重要的两种类型:对象（Object)和数组(Array) <br><br>
+	
+	JavaScript中，对象是由花括号括起来的；（通俗易懂）<br>
+	
+	注意：JavaScript中的字符串的对比，默认是通过字母表中的索引来排序的；
+	例如:<b> tw > th = true</b><br>
+
+	<h3 style="color:#f00">逻辑运算符是对布尔值的合并或者取反（精炼的总结）</h3>
+	所有的Javascript对象都含有方法 <br>
+	<pre>
+	<script>
+		// function Point(x,y)
+		// {
+		// 	this.x =x ;
+		// 	this.y =y ;
+		// }
+		// Point.prototype.R=function()
+		// {
+		// 	return Math.sqrt(this.x*this.x+this.y*this.y);
+		// }
+
+		// var p = new Point(1,2);
+		// alert(p.R());
+		//
+		// 
+		// 
+		//  
+		//   代码0002 
+		// function moveon()
+		// {
+		// 	// 通过弹出一个对话框来询问用户一个问题
+		// 	var answer =  confirm("准备好了吗？");
+		// 	// 单机确定按钮。浏览器会加载一个新页面
+		// 	if (answer) {
+		// 		window.location="http://www.taobao.com";
+		// 	};
+		// }
+		// setTimeout(moveon,3000);
+		// 
+		// 
+		// 
+		// 
+		// 
+		// 代码0003 操作DOM元素
+		
+		// 在document中指定的区域输出调试消息
+		// 如果document中不存在这样的一个区域，则创建一个
+		// function debug(msg){
+		// 	var log = document.getElementById("log");
+		// 	if(!log)
+		// 	{
+		// 		log = document.createElement("div");
+		// 		log.id ="debuglog";
+		// 		log.innerHTML ="<h1>---------------Debug Log---------------</h1>";
+		// 		document.body.appendChild(log);
+		// 		//将消息包装到Pre标签中
+		// 		var pre = document.createElement("pre");
+		// 		var text = document.createTextNode(msg);
+		// 		pre.appendChild(text);
+		// 		log.appendChild(pre);
+		// 	}
+		// }
+		// 
+		// 
+		// 
+		// 
+		// 
+		// 
+		// 
+	</script></pre>
+	<!-- <button onclick="debug('这是就是我的调试信息！')">Debug</button> -->
+
+	<h3>代码0004 JavaScript 操作Web内容的CSS样式 </h3> 
+	通常我们会用到HTML元素的style和classs属性：
+
+	注意：①display:none;  和②visibility:hidden 的区别;
+	其中①隐藏这个元素，器所占的空间也随之消失
+	②将元素隐藏，但保留其所占据的DOM空间<br><br>
+
+	通过事件来定义和处理文档的行为：事件处理程序是在浏览器中注册的JavaScript函数，当特定的事件发生时，浏览器便调用这个函数。通常我们关心的时间类型是鼠标点击事件和键盘按键事件（在智能手机和移动设备中可能是触摸）。
+
+	定义时间处理程序最简单的方法是给HTML的以On为前缀的属性绑定一个毁掉，当写一些简单的测试程序是们最实用的方法就是onclick，
+	
+</body>
+</html>

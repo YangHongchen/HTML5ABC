@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象01-对象直接量</title>
+	<script type="text/javascript">
+	var empty = {};
+	var point = {x:0,y:1};
+	var point2 = {x:point.x,y:point.y+1};
+	var book ={
+		maintitle:"javascript",
+		subtitle:"the definitive guide",
+		for:"all users",
+		author:'yangchen'
+	}	
+	document.write("书名："+book.maintitle+"<br/>");
+	document.write("副名："+book.subtitle+"<br/>");
+	document.write("受众："+book.for+"<br/>");
+	document.write("作者："+book.author+"<br/>");
+	</script>
+</head>
+<body>
+</body>
+</html>

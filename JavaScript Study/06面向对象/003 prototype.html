@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象003-prototype（原型）</title>
+	<script type="text/javascript">
+	var o1 = Object.create({x:1,y:2});
+	var o2 = Object.create(null);   //o2不继承任何属性和方法
+	alert(o2);    // Uncaught TypeError: Cannot convert object to primitive value003 prototype.html:9 (anonymous function)
+	</script>
+</head>
+<body>
+	<h3>原型：</h3>
+	<hr>
+	<pre>
+			每一个Javascript对象（null除外）都和另一个对象相关联。“另一个”对象就是我们熟知的原型，并且每一个对象都从原型继承属性。
+			
+			<h2>Object.create()</h2>
+			<h3>参数说明：</h3>
+			第一个参数：对象的原型
+			第二个参数：创建对象的属性
+	
+	</pre>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>固定菜单-浮动效果</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="css/001-style.css" />
+    <script type="text/javascript">
+    //封装简化原生javascript中document.getElementById()方法
+    var getId = function(id) {
+        return document.getElementById(id);
+    }
+
+    // 封装原生javascript中添加时间的方法
+    var addEvent = function(obj, event, func) {
+        // 针对对标准w3c
+        if (obj.addEventListener) {
+            obj.addEventListener(event, func, false)
+        }
+        // 针对IE内核浏览器
+        else if (obj.attachEvent()) {
+            obj.attachEvent("on" + event, func);
+        }
+    }
+
+    // 创建事件：添加窗口滚动事件监听
+    addEvent(window, "scroll", function() {
+        // 获取窗口的滚动高度
+        var scrollHeight = document.body.scrollTop;
+        // 获取右侧内容页高度，进而计算出滚动的范围高度
+        var contentHeight = getId('right-content').offsetHeight - getId('nav-category-menu').offsetHeight ;
+        var menuSider = getId('nav-category-menu');
+        // 105 菜单栏距离顶部高度（实际情况要用js计算出来）
+        if (scrollHeight> 105 && scrollHeight< contentHeight+105) {
+            menuSider.style.position = "absolute";
+            menuSider.style.left="0px";
+            menuSider.style.top=(scrollHeight-105)+"px";
+        }else if(scrollHeight<=105){
+            menuSider.style.position = "absolute";
+            menuSider.style.left="0px";
+            menuSider.style.top= "0px";
+        }
+    });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <!-- top -->
+        <div id="top"></div>
+        <!-- content -->
+        <div id="content">
+            <div class="main-content">
+                <!-- nav-category-menu -->
+                <div id="nav-category-menu">
+                    <dl>
+                        <dt class="dt-item">
+                            <div class="category">
+                                <h4>标题-1</h4>
+                                <span class="items">
+                                    <a href="javascript:;">菜单1-1</a>
+                                    <a href="javascript:;">菜单2-2</a>
+                                    <a href="javascript:;">菜单3-3</a>
+                                    <a href="javascript:;">菜单4-4</a>
+                                    <a href="javascript:;">菜单5-5</a></span>
+                            </div>
+                        </dt>
+                        <dt class="dt-item">
+                            <div class="category">
+                                <h4>标题-2</h4>
+                                <span class="items">
+                                    <a href="javascript:;">菜单1-1</a>
+                                    <a href="javascript:;">菜单2-2</a>
+                                    <a href="javascript:;">菜单3-3</a>
+                                    <a href="javascript:;">菜单4-4</a>
+                                    <a href="javascript:;">菜单5-5</a></span>
+                            </div>
+                        </dt>
+                        <dt class="dt-item">
+                            <div class="category">
+                                <h4>标题-3</h4>
+                                <span class="items">
+                                    <a href="javascript:;">菜单1-1</a>
+                                    <a href="javascript:;">菜单2-2</a>
+                                    <a href="javascript:;">菜单3-3</a>
+                                    <a href="javascript:;">菜单4-4</a>
+                                    <a href="javascript:;">菜单5-5</a></span>
+                            </div>
+                        </dt>
+                        <dt class="dt-item">
+                            <div class="category">
+                                <h4>标题-4</h4>
+                                <span class="items">
+                                    <a href="javascript:;">菜单1-1</a>
+                                    <a href="javascript:;">菜单2-2</a>
+                                    <a href="javascript:;">菜单3-3</a>
+                                    <a href="javascript:;">菜单4-4</a>
+                                    <a href="javascript:;">菜单5-5</a></span>
+                            </div>
+                        </dt>
+                        <dt class="dt-item">
+                            <div class="category">
+                                <h4>标题-5</h4>
+                                <span class="items">
+                                    <a href="javascript:;">菜单1-1</a>
+                                    <a href="javascript:;">菜单2-2</a>
+                                    <a href="javascript:;">菜单3-3</a>
+                                    <a href="javascript:;">菜单4-4</a>
+                                    <a href="javascript:;">菜单5-5</a></span>
+                            </div>
+                        </dt>
+                    </dl>
+                </div>
+                <!-- 右侧主要内容 -->
+                <div id="right-content">
+                    <h1>1</h1>
+                    <h1>2</h1>
+                    <h1>3</h1>
+                    <h1>4</h1>
+                    <h1>5</h1>
+                    <h1>6</h1>
+                    <h1>7</h1>
+                    <h1>8</h1>
+                    <h1>9</h1>
+                    <h1>10</h1>
+                    <h1>11</h1>
+                    <h1>12</h1>
+                    <h1>13</h1>
+                    <h1>14</h1>
+                    <h1>15</h1>
+                    <h1>16</h1>
+                    <h1>17</h1>
+                    <h1>18</h1>
+                    <h1>19</h1>
+                    <h1>20</h1>
+                    <h1>21</h1>
+                    <h1>22</h1>
+                    <h1>23</h1>
+                    <h1>24</h1>
+                    <h1>25</h1>
+                    <h1>26</h1>
+                    <h1>27</h1>
+                    <h1>28</h1>
+                    <h1>29</h1>
+                    <h1>30</h1> <h1>18</h1>
+                    <h1>19</h1>
+                    <h1>20</h1>
+                    <h1>21</h1>
+                    <h1>22</h1>
+                    <h1>23</h1>
+                    <h1>24</h1>
+                    <h1>25</h1>
+                    <h1>26</h1>
+                    <h1>27</h1>
+                    <h1>28</h1>
+                    <h1>29</h1>
+                    <h1>30</h1> <h1>18</h1>
+                    <h1>19</h1>
+                    <h1>20</h1>
+                    <h1>21</h1>
+                    <h1>22</h1>
+                    <h1>23</h1>
+                    <h1>24</h1>
+                    <h1>25</h1>
+                    <h1>26</h1>
+                    <h1>27</h1>
+                    <h1>28</h1>
+                    <h1>29</h1>
+                    <h1>30</h1>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+    </div>
+</body>
+
+</html>

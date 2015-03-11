@@ -1,0 +1,126 @@
+html{
+	width: 100%;
+	height: 100%;
+	/*禁用移动设备旋转对字体大小的调整*/
+	-webkit-text-size-adjust:none;
+	-ms-text-size-adjust:none;
+	-moz-text-size-adjust:none;
+	-o-text-size-adjust:none;
+	text-size-adjust:none;
+}
+
+body{
+	margin: 0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+	background: #47c9af;
+	color: #74777b;
+	font-weight: 300;
+	font-size: 1.5em;
+	font-family: "Raleway","Arail";
+}
+
+ul{
+	list-style:none;
+	padding:0;
+	margin: 0;
+}
+
+a:link, a:visited ,a:focus,a:active{
+	text-decoration: none;
+	outline: none;
+}
+
+/*禁用任何添加的元素影响原有盒子的大小*/
+*,*:after,*:before{
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+
+}
+
+*:after,*:before{
+	display:block;
+	content: "";
+	clear:both;
+}
+
+/*Navigator*/
+
+.navigator{
+	width: 1024px;
+	height: 300px;
+	margin: 200px auto;
+}
+
+.navigator li{
+	display: inline-block;
+	margin: 0 1em;
+}
+
+.tooltip{
+	display: inline-block;
+	font-weight: 700;
+	color: rgba(0,0,0,0.3);
+	padding: 0.15em 0.25em 0;
+	position: relative;
+	z-index: 999;
+}
+
+.tooltip-content{
+	position: absolute;
+	z-index: 9999;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	background: #FFF;
+	left: 50%;
+	margin-left: -40px;
+	bottom: 100%;
+	margin-top: -10px;
+	text-align: center;
+	padding-top: 25px;
+	color: #47c9af;
+	opacity: 0;
+	-webkit-transition:opacity 0.3s;
+	transition:opacity 0.3s;
+
+}
+
+.tooltip-content::after{
+	display: block;
+	content: "";
+	width: 30px;
+	height: 20px;
+	background: url('../img/tooltip-arrow-bottom.svg');
+	background-size: 100%;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin: -7px 0px 0px -15px ;
+}
+
+
+/*动画效果1*/
+.tooltip-effect1 .tooltip-content{
+	-webkit-transform:translate3D(0,0,0) rotate3D(1,1,1,45deg);
+	transform:translate3D(0,0,0) rotate3D(1,1,1,45deg);
+	/*设置旋转中心点*/
+	-webkit-transform-origin:50% 100%;
+	transform-origin:50% 100%;
+}
+
+.tooltip-effect1 .tooltip-content i{
+	-webkit-transform:scale3D(0,0,1);
+	transform:scale3D(0,0,1);
+}
+
+.tooltip:hover .tooltip-content,
+.tooltip:hover .tooltip-content i {
+	opacity: 1;
+	-webkit-transform:translate3D(0,0,0) rotate3D(1,1,1,0) scale3D(1,1,1);
+	transform:translate3D(0,0,0) rotate3D(1,1,1,0) scale3D(1,1,1);
+}

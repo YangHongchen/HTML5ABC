@@ -1,0 +1,29 @@
+body{
+	padding:0px ;
+	margin: 0px;
+}
+
+.news{
+	width: 500px;
+	height: 300px;
+	border: 15px solid #DDD;
+	border-radius: 5px;
+	padding:15px;
+	font-family: microsoft yahei ;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -155px;	
+	margin-left: -255px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.2);	
+}
+
+h3{
+	color: #09f;
+	font-size: 20px;
+}
+
+.tooltip{
+	cursor: pointer;
+	color: #09f;
+}

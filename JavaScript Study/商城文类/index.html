@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品分类</title>
+    <style type="text/css">
+    body,
+    ul {
+        padding: 0px;
+        margin: 0px;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    #category {
+        width: 220px;
+        display: block;
+        border: 2px solid #DC0000;
+        font-family: microsoft yahei;
+    }
+    #category a {
+        text-decoration: none;
+        color: #313131;
+    }
+    #category a:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        color: #DC0000;
+    }
+    #category_top {
+        height: 40px;
+        line-height: 40px;
+        text-align: left;
+        font-size: 12pt;
+        font-weight: bold;
+        color: #FFF;
+        background: #DC0000;
+        text-indent: 20px;
+    }
+    #categroy_second .category_item {
+        height: 30px;
+        line-height: 30px;
+        font-size: 10pt;
+        list-style: none;
+        text-align: left;
+        text-indent: 12px;
+    }
+    #categroy_second .category_item:hover {
+        border: 0px solid #DDD;
+        border-right: 0;
+        box-shadow: 0 0 8px #ddd;
+        -moz-box-shadow: 0 0 8px #ddd;
+        -webkit-box-shadow: 0 0 8px #999;
+    }
+    .category_second {
+        display: none;
+        width: 400px;
+        height: 480px;
+        border: #DC0000 1px solid;
+        z-index: 99;
+        position: relative;
+        left: 220px;
+        top: -30px;
+        background: url('./image/sencond_div.jpg');
+    }
+    </style>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <div id="category">
+        <div id="category_top">全部商品分类</div>
+        <ul id="categroy_second">
+            <li class="category_item"><a href="#">图书</a> / <a href="#">音像</a> / <a href="#">数字商品</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">家用电器</a></a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">手机</a> / <a href="#">数码</a> / <a href="#">京东通信</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">电脑</a> / <a href="#"> 办公</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">家居</a> / <a href="#">家具</a> / <a href="#">家装</a> / <a href="#">厨具</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">服饰内衣</a> / <a href="#">珠宝首饰</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">个护化妆</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">鞋靴</a> / <a href="#">箱包</a> / <a href="#">钟表</a> / <a href="#">奢侈品</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">运动户外</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">汽车用品</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">母婴</a> / <a href="#">玩具乐器</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">食品</a> / <a href="#">饮料</a> / <a href="#">生鲜</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">营养保健</a>
+                <div class="category_second">二级</div>
+            </li>
+            <li class="category_item"><a href="#">彩票</a> / <a href="#">旅行</a> / <a href="#">充值</a> / <a href="#">票务</a>
+                <div class="category_second">二级</div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>分享动画链接-share</title>
+    <style type="text/css">
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+    #shareDiv {
+        width: 180px;
+        height: 300px;
+        position: absolute;
+        top: 50%;
+        left: -151px;
+        margin: -150px 0 0 0;
+    }
+    #shareCon {
+        width: 150px;
+        height: 100%;
+        border: 0px solid #555;
+        background: #888;
+        border-left: 0px;
+        border-radius: 0 4px 4px 0;
+        float: left;
+    }
+    #shareBtn {
+        height: 80px;
+        width: 25px;
+        text-align: center;
+        margin-top: 100px;
+        float: left;
+        background: #E63338;
+        color: #FFF;
+        border-radius: 0 2px 2px 0;
+    }
+    </style>
+    <script type="text/javascript">
+    window.onload = function() {
+        var shareDiv = document.getElementById("shareDiv");
+        shareDiv.onmouseover = function() {
+            shareBtn(0);
+        }
+        shareDiv.onmouseout = function() {
+            shareBtn(-150);
+        }
+    }
+
+    var timer = null;
+
+    function shareBtn(iTarget) {
+        clearInterval(timer); // 防止重复创建定时器
+        var shareDiv = document.getElementById("shareDiv");
+        var speed = 0;
+        if (shareDiv.offsetLeft < iTarget) {
+            speed = 1;
+        } else {
+            speed = -1;
+        }
+        timer = setInterval(function() {
+            if (shareDiv.offsetLeft == iTarget) {
+                clearInterval(timer);
+            } else {
+                shareDiv.style.left = shareDiv.offsetLeft + speed + "px";
+            }
+        }, 1);
+    }
+    </script>
+</head>
+
+<body>
+    <div id="shareDiv">
+        <div id="shareCon">内容</div>
+        <div id="shareBtn">分享</div>
+    </div>
+</body>
+
+</html>
